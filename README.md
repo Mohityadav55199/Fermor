@@ -2,131 +2,108 @@
 
 > **"All your finances made simple. Understand. Act. Grow."**
 
-This repository contains the homepage and interactive financial intelligence suite for **FERMOR**, designed and engineered as part of the Frontend Developer / Founding Software Engineer evaluation.
+This repository contains the homepage and financial product experience for **FERMOR**, designed and engineered as part of the Frontend Developer evaluation.
 
 ---
 
-## 🌟 Live Demo & Preview
-- **Framework**: Next.js 14 (App Router) + React 18+ + TypeScript
+## 🌟 Live Demo & Architecture
+
+- **Live Local Run**: `npm run dev` at [http://localhost:3005](http://localhost:3005)
+- **Framework**: Next.js 14 (App Router) + React 18 + TypeScript
 - **Styling**: Tailwind CSS + Custom Fermor Tokens
-- **Icons & Motion**: Lucide React + Native CSS Springs + Web Audio API
-- **Live Local Run**: `npm run dev` at [http://localhost:3000](http://localhost:3000)
+- **Icons**: Lucide React
+- **Brand Geometry**: Authentic 2-stepped chevron Fermor vector mark + Transparent Favicon
 
 ---
 
-## 💡 Product Thinking & Design Philosophy
+## 💡 Product Thinking & Design Philosophy: "The Clarity Engine"
 
-### Why Most AI-Generated Templates Fail
-Generic AI templates suffer from repetitive clichés: purple/cyan neon blobs, meaningless floating 3D spheres, vague buzzwords (*"supercharge synergy"*), static non-functional screenshot mockups, and zero understanding of Indian capital market realities (such as SEBI compliance, direct vs regular mutual fund expense ratios, STT/brokerage calculations, and derivative risk disclosures).
+Finance in India is fragmented across multiple broker Demats, AMC direct portals, banking accounts, and tax tools. Most platforms simply display raw numbers without context. Fermor acts as **The Clarity Engine**: translating complex financial realities into simple, confident decisions.
 
-### The Fermor Approach: Distinct, Authentic, High-Conviction
-1. **True Brand Alignment**: Built strictly around Fermor's emerald/mint green brand identity (`#00E599` / `#00C076`), rich obsidian slate surfaces (`#07090E`), and institutional-grade typography with monospace numeric alignments.
-2. **Pillared Architecture (Solving *Understand. Act. Grow.*)**:
-   - **Understand (Pillar 01)**: Solves the multi-broker fragmentation problem. Connects Zerodha, Groww, Demats, and Gold into a unified net worth and identifies hidden expense-ratio leaks (saving thousands of rupees by switching regular mutual funds to direct plans).
-   - **Act (Pillar 02)**: Bridges the gap between retail traders and institutional tools. Features a **live interactive F&O Options Payoff Visualizer** (Bull Call Spread, Iron Condor, Long Straddle) that makes derivatives risk and breakeven transparent *before* an order is placed.
-   - **Grow (Pillar 03)**: Features an **Interactive Step-Up SIP Simulator** demonstrating how an annual 10% step-up more than doubles wealth creation compared to static investments, with optional 6% inflation-adjustment modeling.
-3. **Institutional Research Terminal**: Real-time stock scanner with interactive timeframes (1D, 1W, 1M, 1Y, 5Y), candlestick/area chart rendering, P/E metrics, Fermor Health Scores, and plain-English business catalysts.
-4. **Working Micro-Interactions**:
-   - **Live Simulated Market Ticker** (Nifty 50, Sensex, Bank Nifty, S&P 500, Gold, Forex).
-   - **Global Command Palette (`⌘K` / `Ctrl+K`)** for instant symbol search and tool shortcuts.
-   - **Synthesized Web Audio Haptics** (subtle tactile audio feedback on clicks and toggles with zero external assets).
-   - **Interactive Brokerage Savings Calculator** comparing Fermor's ₹10 flat orders vs traditional ₹20 + AMC brokers.
-   - **Multi-Step Onboarding Modal** with phone/OTP simulation and confetti celebration.
-   - **SEBI Regulatory Compliance**: Legally accurate statutory disclosures, CDSL depository custody details, and derivative risk notices.
+### Reference Synthesis
+
+```
+┌──────────────────────────┐   ┌──────────────────────────┐   ┌──────────────────────────┐
+│          MONZO           │   │       WEALTHFRONT        │   │          FERMOR          │
+│   (Human & Approachable) │   │ (Clarity & Storytelling) │   │     (Brand & Market)     │
+└────────────┬─────────────┘   └────────────┬─────────────┘   └────────────┬─────────────┘
+             │                              │                              │
+             ▼                              ▼                              ▼
+  • Human, approachable tone     • Connecting features to       • Exact green stepped mark
+  • Living product previews        long-term outcomes           • "All your finances
+  • De-jargonized copy           • Progressive disclosure         made simple."
+  • Touch-friendly clarity       • Clean decision frameworks    • "Understand. Act. Grow."
+             │                              │                   • Indian context (₹, SIP,
+             │                              │                     Direct MFs, CDSL, SGB)
+             └──────────────────────┬───────┴──────────────────────────────┘
+                                    │
+                                    ▼
+                     ┌──────────────────────────────┐
+                     │    FERMOR DESIGN LANGUAGE    │
+                     │  "The Clarity Engine" (2026) │
+                     │  Warm • Human • Disciplined  │
+                     └──────────────────────────────┘
+```
+
+1. **Product Demonstration Over Marketing Hype**: Show the actual interface solving real financial problems rather than relying on abstract marketing slogans.
+2. **Context Over Data Overload**: Every metric is paired with clear meaning (e.g., *Current allocation vs. Target*, *Static SIP vs. Step-Up compounding*).
+3. **Warm Editorial Calm**: A warm off-white canvas (`#FAF9F6`), generous whitespace, and sharp slate typography (`#0F172A`) replace dark cyberpunk glows and neon gradients.
+4. **Restraint with Color**: Brand green (`#00C875`) is reserved exclusively for positive financial momentum, interactive actions, and the brand mark.
+5. **Monospace for Data, Sans for Humans**: Monospace (`JetBrains Mono`) is strictly applied to numerical figures (`.tnum`) and chart axes; all headlines, navigation, and body copy use clean modern sans-serif (`Inter`).
+6. **Zero Fabricated Claims**: No fake user numbers, invented AUM, or synthetic badges.
 
 ---
 
-## 🛠️ Project Structure
+## 📋 Section Architecture
 
-```
-fermor-homepage/
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx         # Root layout with SEO metadata & fonts
-│   │   ├── page.tsx           # Assembled interactive homepage
-│   │   └── globals.css        # Fermor theme variables, scrollbars & grid
-│   ├── components/
-│   │   ├── common/
-│   │   │   └── FermorLogo.tsx # Official Fermor SVG brand geometry
-│   │   ├── navbar/
-│   │   │   ├── MarketTicker.tsx # Live simulated indices ticker
-│   │   │   └── Navbar.tsx     # Navigation, mega-menu & controls
-│   │   ├── hero/
-│   │   │   ├── HeroSection.tsx
-│   │   │   └── InteractiveCommandDeck.tsx # 3-Pillar interactive deck
-│   │   ├── pillars/
-│   │   │   ├── UnderstandPillar.tsx # Portfolio sync & overlap scanner
-│   │   │   ├── ActPillar.tsx        # F&O Options Payoff Visualizer
-│   │   │   └── GrowPillar.tsx       # Step-Up SIP Compounding Engine
-│   │   ├── terminal/
-│   │   │   └── StockResearchTerminal.tsx # Interactive Stock charts
-│   │   ├── pricing/
-│   │   │   └── PricingSection.tsx   # Fees & interactive savings calculator
-│   │   ├── security/
-│   │   │   └── SecurityAndTrust.tsx # CDSL custody & SEBI compliance
-│   │   ├── testimonials/
-│   │   │   └── TraderStories.tsx    # Investor personas & reviews
-│   │   ├── command-palette/
-│   │   │   └── CommandPaletteModal.tsx # Global ⌘K search dialog
-│   │   ├── cta/
-│   │   │   └── EarlyAccessCTA.tsx   # KYC onboarding with confetti
-│   │   └── footer/
-│   │       └── Footer.tsx           # Regulatory disclosures & sitemap
-│   ├── lib/
-│   │   ├── audio.ts                 # Web Audio API sound synthesizer
-│   │   ├── market-data.ts           # Indian market feeds & stock data
-│   │   └── utils.ts                 # Currency (INR) & class helpers
-│   └── types/
-├── tailwind.config.ts
-├── tsconfig.json
-└── package.json
-```
+1. **Minimal Navigation**: Fixed/sticky navbar with Fermor logo, clean navigation links, and primary CTA.
+2. **Hero (Asymmetrical 50/50 Composition)**:
+   - Left: Editorial headline *"All your finances made simple."* with supporting proposition and primary actions.
+   - Right: Interactive Net Worth Dashboard with dynamic `1M | 6M | 1Y | ALL` SVG chart and interactive asset allocation breakdown.
+3. **The Core Narrative (Understand → Act → Grow)**:
+   - **Stage 01 Understand**: Consolidated holdings overview across bank Demats & mutual funds + fee leak scanner.
+   - **Stage 02 Act**: Risk-defined options payoff visualizer & direct execution.
+   - **Stage 03 Grow**: Automated 10% annual Step-Up SIP habit builder.
+4. **Structured Product Ecosystem**:
+   - Organized by financial domain: *Invest & Compound* (Direct MFs, Step-Up SIPs), *Markets & Trading* (Equities, F&O), *Research Studio* (60s Briefs), and *Portfolio Intelligence* (Multi-broker CDSL sync).
+5. **Financial Decision Experience ("Should I invest this month?")**:
+   - Interactive monthly surplus slider and emergency buffer toggle that dynamically generate a 3-step personalized allocation recommendation.
+6. **Trust & Philosophy**: Editorial principles covering Direct CDSL Demat Custody, 0% Commission Philosophy, Transparent Flat Pricing, and Bank-Grade Privacy.
+7. **Final Actionable CTA & Footer**: Focused on *"Understand your money. Act with clarity. Grow with confidence."*
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Prerequisites
-- Node.js `v18.17.0` or later (tested on Node v24)
-- npm / yarn / pnpm
+### Prerequisites
+- Node.js 18.17+ or 20+
+- npm 9+
 
-### 2. Installation
+### Installation & Local Run
 ```bash
-# Clone repository
-git clone https://github.com/your-username/fermor-homepage.git
-cd fermor-homepage
+# Clone the repository
+git clone https://github.com/Mohityadav55199/Fermor.git
+cd Fermor
 
 # Install dependencies
 npm install
+
+# Start local development server on port 3005
+npm run dev -- -p 3005
 ```
 
-### 3. Running Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3005](http://localhost:3005) in your browser.
 
-### 4. Production Build
+---
+
+## 📦 Production Build Verification
+
 ```bash
+# Verify TypeScript types and production bundle
 npm run build
-npm run start
 ```
 
 ---
 
-## 🚢 Deployment (Vercel / Netlify)
-
-### Deploy to Vercel
-1. Push this repository to GitHub.
-2. Go to [vercel.com](https://vercel.com) and click **Add New Project**.
-3. Import this repository.
-4. Framework Preset will automatically detect **Next.js**.
-5. Click **Deploy**.
-
----
-
-## 📋 Key Architectural Decisions
-- **Zero Heavy External Chart Libraries**: Charts and payoff curves are built with lightweight, responsive native SVGs, reducing bundle size to under **121 kB** First Load JS.
-- **Web Audio API Haptics**: High-frequency micro-haptics synthesized in browser memory without loading bulky `.mp3` files over the network.
-- **Strict Tabular Numerics**: Implemented `tnum` font features so financial stock tickers and currency values remain strictly stable during real-time updates without horizontal jitter.
-- **Accessibility & Keyboard Ergonomics**: Global keyboard listeners (`⌘K`, `Ctrl+K`, `Esc`) and high-contrast color ratios ensuring WCAG AAA standards.
+## 🛡️ License
+© Fermor Technologies. All rights reserved.
