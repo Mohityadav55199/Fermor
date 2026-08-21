@@ -1,109 +1,95 @@
-# FERMOR — Homepage & Wealth Intelligence Platform
+# FERMOR — Homepage & Financial Product Experience
 
 > **"All your finances made simple. Understand. Act. Grow."**
 
-This repository contains the homepage and financial product experience for **FERMOR**, designed and engineered as part of the Frontend Developer evaluation.
+This repository contains the submission for the **FERMOR Frontend Developer Assignment**.
+
+- **Live Deployed Demo:** [https://fermor-mu.vercel.app](https://fermor-mu.vercel.app)
+- **GitHub Repository:** [https://github.com/Mohityadav55199/Fermor](https://github.com/Mohityadav55199/Fermor)
 
 ---
 
-## 🌟 Live Demo & Architecture
+## 🛠️ Tech Stack & Setup Instructions
 
-- **Live Local Run**: `npm run dev` at [http://localhost:3005](http://localhost:3005)
-- **Framework**: Next.js 14 (App Router) + React 18 + TypeScript
-- **Styling**: Tailwind CSS + Custom Fermor Tokens
-- **Icons**: Lucide React
-- **Brand Geometry**: Authentic 2-stepped chevron Fermor vector mark + Transparent Favicon
-
----
-
-## 💡 Product Thinking & Design Philosophy: "The Clarity Engine"
-
-Finance in India is fragmented across multiple broker Demats, AMC direct portals, banking accounts, and tax tools. Most platforms simply display raw numbers without context. Fermor acts as **The Clarity Engine**: translating complex financial realities into simple, confident decisions.
-
-### Reference Synthesis
-
-```
-┌──────────────────────────┐   ┌──────────────────────────┐   ┌──────────────────────────┐
-│          MONZO           │   │       WEALTHFRONT        │   │          FERMOR          │
-│   (Human & Approachable) │   │ (Clarity & Storytelling) │   │     (Brand & Market)     │
-└────────────┬─────────────┘   └────────────┬─────────────┘   └────────────┬─────────────┘
-             │                              │                              │
-             ▼                              ▼                              ▼
-  • Human, approachable tone     • Connecting features to       • Exact green stepped mark
-  • Living product previews        long-term outcomes           • "All your finances
-  • De-jargonized copy           • Progressive disclosure         made simple."
-  • Touch-friendly clarity       • Clean decision frameworks    • "Understand. Act. Grow."
-             │                              │                   • Indian context (₹, SIP,
-             │                              │                     Direct MFs, CDSL, SGB)
-             └──────────────────────┬───────┴──────────────────────────────┘
-                                    │
-                                    ▼
-                     ┌──────────────────────────────┐
-                     │    FERMOR DESIGN LANGUAGE    │
-                     │  "The Clarity Engine" (2026) │
-                     │  Warm • Human • Disciplined  │
-                     └──────────────────────────────┘
-```
-
-1. **Product Demonstration Over Marketing Hype**: Show the actual interface solving real financial problems rather than relying on abstract marketing slogans.
-2. **Context Over Data Overload**: Every metric is paired with clear meaning (e.g., *Current allocation vs. Target*, *Static SIP vs. Step-Up compounding*).
-3. **Warm Editorial Calm**: A warm off-white canvas (`#FAF9F6`), generous whitespace, and sharp slate typography (`#0F172A`) replace dark cyberpunk glows and neon gradients.
-4. **Restraint with Color**: Brand green (`#00C875`) is reserved exclusively for positive financial momentum, interactive actions, and the brand mark.
-5. **Monospace for Data, Sans for Humans**: Monospace (`JetBrains Mono`) is strictly applied to numerical figures (`.tnum`) and chart axes; all headlines, navigation, and body copy use clean modern sans-serif (`Inter`).
-6. **Zero Fabricated Claims**: No fake user numbers, invented AUM, or synthetic badges.
-
----
-
-## 📋 Section Architecture
-
-1. **Minimal Navigation**: Fixed/sticky navbar with Fermor logo, clean navigation links, and primary CTA.
-2. **Hero (Asymmetrical 50/50 Composition)**:
-   - Left: Editorial headline *"All your finances made simple."* with supporting proposition and primary actions.
-   - Right: Interactive Net Worth Dashboard with dynamic `1M | 6M | 1Y | ALL` SVG chart and interactive asset allocation breakdown.
-3. **The Core Narrative (Understand → Act → Grow)**:
-   - **Stage 01 Understand**: Consolidated holdings overview across bank Demats & mutual funds + fee leak scanner.
-   - **Stage 02 Act**: Risk-defined options payoff visualizer & direct execution.
-   - **Stage 03 Grow**: Automated 10% annual Step-Up SIP habit builder.
-4. **Structured Product Ecosystem**:
-   - Organized by financial domain: *Invest & Compound* (Direct MFs, Step-Up SIPs), *Markets & Trading* (Equities, F&O), *Research Studio* (60s Briefs), and *Portfolio Intelligence* (Multi-broker CDSL sync).
-5. **Financial Decision Experience ("Should I invest this month?")**:
-   - Interactive monthly surplus slider and emergency buffer toggle that dynamically generate a 3-step personalized allocation recommendation.
-6. **Trust & Philosophy**: Editorial principles covering Direct CDSL Demat Custody, 0% Commission Philosophy, Transparent Flat Pricing, and Bank-Grade Privacy.
-7. **Final Actionable CTA & Footer**: Focused on *"Understand your money. Act with clarity. Grow with confidence."*
-
----
-
-## 🚀 Getting Started
+### Stack
+- **Framework:** Next.js 14 (App Router) + React 18 + TypeScript
+- **Styling:** Tailwind CSS + Custom Fermor Color Tokens
+- **Icons:** Lucide React
+- **Animation:** Framer Motion + CSS Transitions
 
 ### Prerequisites
 - Node.js 18.17+ or 20+
 - npm 9+
 
-### Installation & Local Run
-```bash
-# Clone the repository
-git clone https://github.com/Mohityadav55199/Fermor.git
-cd Fermor
+### Setup & Local Development
 
-# Install dependencies
-npm install
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Mohityadav55199/Fermor.git
+   cd Fermor
+   ```
 
-# Start local development server on port 3005
-npm run dev -- -p 3005
-```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3005](http://localhost:3005) in your browser.
+3. **Run local development server:**
+   ```bash
+   npm run dev
+   ```
 
----
-
-## 📦 Production Build Verification
-
-```bash
-# Verify TypeScript types and production bundle
-npm run build
-```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🛡️ License
-© Fermor Technologies. All rights reserved.
+## 💡 Important Design Decisions & Product Thinking
+
+### 1. "The Clarity Engine" Product Concept
+Indian financial wealth is fragmented across multiple Demat brokers, AMC direct portals, bank accounts, and tax tools. Most platforms simply display raw numbers without context. The FERMOR homepage is built as **The Clarity Engine**: translating complex financial realities into simple, confident decisions.
+
+### 2. Product-Led Experience Over Marketing Hype
+Rather than static illustrations or generic dark landing pages, the homepage features an **interactive Financial Intent Simulator**. Visitors can test real financial scenarios (e.g. *"Invest ₹15,000/mo"*, *"Save Tax under 80C"*) and see how money is dynamically routed across Direct Index Funds, Flexi-Cap MFs, and Emergency reserves.
+
+### 3. Core Narrative (Understand → Act → Grow)
+The layout guides users through three natural stages of financial life:
+- **UNDERSTAND:** Consolidated holdings across Demats & MFs, true XIRR, fee leak scanner.
+- **ACT:** Risk-defined options payoff visualizer & transparent order routing.
+- **GROW:** Automated 10% annual Step-Up SIP habit compounding engine.
+
+### 4. Absolute Brand Preservation
+- **Logo:** Exact 2-stepped chevron Fermor vector mark (`/favicon.svg`) with uppercase tracking.
+- **Palette:** Signature Fermor Green (`#00C875`) primary accent on a warm `#FAF9F6` off-white editorial canvas with crisp dark slate typography (`#0F172A`).
+- **Identity:** Authentic Indian financial context (Rupees `₹`, Direct Mutual Funds, Step-Up SIPs, Nifty 50, ELSS 80C, EPF).
+
+### 5. Typography & Motion
+- Headlines and copy use `Inter` for human readability; numerical data uses `JetBrains Mono` with tabular numbers (`.tnum`).
+- Micro-animations are strictly functional (number transitions, slider re-renders, stage tab reveals).
+
+---
+
+## 📁 Repository Structure
+
+```
+├── public/                 # Static brand assets & favicon
+│   ├── favicon.svg         # Official green Fermor geometric mark
+│   └── fermor-mark.png
+├── src/
+│   ├── app/                # Next.js 14 App Router (layout, page, styles)
+│   ├── components/         # Modular React components
+│   │   ├── navbar/         # Sticky glass navbar with live market ticker
+│   │   ├── hero/           # Asymmetrical hero with interactive portfolio dashboard
+│   │   ├── story/          # Interactive 3-stage timeline (Understand -> Act -> Grow)
+│   │   ├── products/       # Asymmetrical Bento feature grid
+│   │   ├── clarity/        # Financial decision case study simulator
+│   │   ├── philosophy/     # Trust & transparency pillars
+│   │   ├── cta/            # Early access onboarding modal
+│   │   └── footer/         # Footer with legal disclaimers
+│   └── lib/                # Utility helpers & formatting functions
+└── tailwind.config.ts      # Custom Fermor color tokens & animations
+```
+
+---
+
+## 📄 License & Attribution
+Designed & developed for the FERMOR Frontend Developer Evaluation.
